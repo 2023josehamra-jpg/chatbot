@@ -1,0 +1,193 @@
+/* Paleta Colorida y Divertida */
+:root {
+    --fondo-principal: #121026;
+    --tarjeta-bg: #1e1b4b;
+    --verde-cancha: #10b981;
+    --verde-hover: #059669;
+    --amarillo-sol: #fbbf24;
+    --amarillo-hover: #f59e0b;
+    --violeta-bot: #8b5cf6;
+    --texto-blanco: #ffffff;
+    --texto-oscuro: #0f172a;
+    --rojo-error: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #2e1065, var(--fondo-principal));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Contenedor Principal del Chatbot */
+.contenedor-principal {
+    width: 100%;
+    max-width: 500px;
+    height: 88vh;
+    background-color: var(--tarjeta-bg);
+    border: 4px solid var(--amarillo-sol);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header-bot {
+    background: linear-gradient(135deg, var(--violeta-bot), #6366f1);
+    color: var(--texto-blanco);
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid var(--amarillo-sol);
+}
+
+.header-bot h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.header-bot p {
+    font-size: 0.85rem;
+    margin-top: 3px;
+    opacity: 0.9;
+}
+
+/* Identificadores exactos del boceto */
+.zonas.de.mensajes {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #0f172a;
+}
+
+/* Estilos de Burbujas de Mensaje */
+.mensaje {
+    max-width: 82%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    animation: aparecer 0.2s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mensaje.bot {
+    align-self: flex-start;
+    background-color: var(--violeta-bot);
+    color: var(--texto-blanco);
+    border-bottom-left-radius: 2px;
+}
+
+.mensaje.usuario {
+    align-self: flex-end;
+    background-color: var(--amarillo-sol);
+    color: var(--texto-oscuro);
+    font-weight: bold;
+    border-bottom-right-radius: 2px;
+}
+
+/* Zona de Ingreso de Opciones */
+.ingresos.de.opciones {
+    padding: 15px;
+    background-color: #1e1b4b;
+    border-top: 3px solid var(--amarillo-sol);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Botones Interactivos */
+.opcion-btn {
+    background-color: var(--verde-cancha);
+    color: var(--texto-blanco);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.opcion-btn:hover {
+    background-color: var(--verde-hover);
+    transform: scale(1.02);
+}
+
+.opcion-btn:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para opción de salir o reiniciar */
+.opcion-btn.salir {
+    background-color: #ef4444;
+}
+
+.opcion-btn.salir:hover {
+    background-color: #dc2626;
+}
+
+/* Formularios de Input Requeridos */
+.input-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-fila {
+    display: flex;
+    gap: 8px;
+}
+
+.input-datos {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 2px solid var(--amarillo-sol);
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: var(--texto-oscuro);
+    outline: none;
+}
+
+.msj-error {
+    color: var(--rojo-error);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Diseño Responsive para Celulares */
+@media (max-width: 600px) {
+    .contenedor-principal {
+        width: 100%;
+        height: 95vh;
+        border-radius: 12px;
+    }
+
+    .header-bot h1 {
+        font-size: 1.3rem;
+    }
+
+    .mensaje {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,79 @@
+{
+  "inicio": {
+    "texto": "¡Ea, ea, golazo! ⚽ Soy tu chatbot futbolero preferido. Antes de arrancar la jugada, ¿de qué club sos hincha?",
+    "requiereInput": true,
+    "tipoValidacion": "texto",
+    "placeholder": "Escribí tu club de fútbol...",
+    "guardarEleccion": true,
+    "siguiente": "menu_principal"
+  },
+  "menu_principal": {
+    "texto": "¡Qué grande el hincha de {equipo}! 🔥 Contame, ¿qué jugada querés hacer hoy en la cancha?",
+    "opciones": [
+      {
+        "texto": "📅 ¿Quién juega hoy?",
+        "siguiente": "quien_juega_hoy"
+      },
+      {
+        "texto": "🔮 Mis pronósticos imparciales",
+        "siguiente": "mis_pronosticos"
+      },
+      {
+        "texto": "🏆 Chances para ganar la Copa Libertadores",
+        "siguiente": "chances_libertadores"
+      },
+      {
+        "texto": "❌ Terminar conversación",
+        "siguiente": "fin"
+      }
+    ]
+  },
+  "quien_juega_hoy": {
+    "texto": "¡Hoy la pelota no se mancha! ⚽ En la Liga Profesional hay fecha de clásicos y copas internacionales en juego. Revisá la grilla de la tarde porque hay partidazos imperdibles.",
+    "opciones": [
+      {
+        "texto": "🔙 Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "❌ Terminar conversación",
+        "siguiente": "fin"
+      }
+    ]
+  },
+  "mis_pronosticos": {
+    "texto": "Mi bola de cristal futbolera dice: ¡{equipo} tiene 85% de chances de ganar su próximo partido si mantiene la presión alta! Pero ojo con los contragolpes por las bandas.",
+    "opciones": [
+      {
+        "texto": "🔙 Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "❌ Terminar conversación",
+        "siguiente": "fin"
+      }
+    ]
+  },
+  "chances_libertadores": {
+    "texto": "Analizando fríamente los planteles: Los equipos brasileños (Flamengo, Palmeiras) son los candidatos fuertes por presupuesto, pero los históricos de Argentina siempre dan pelea en los mano a mano de la Gloria Eterna.",
+    "opciones": [
+      {
+        "texto": "🔙 Volver al menú principal",
+        "siguiente": "menu_principal"
+      },
+      {
+        "texto": "❌ Terminar conversación",
+        "siguiente": "fin"
+      }
+    ]
+  },
+  "fin": {
+    "texto": "¡Pitazo final! 🏁 Termina el partido por hoy. Acordate que la pelota siempre sigue rodando.",
+    "opciones": [
+      {
+        "texto": "🔄 Volver a empezar (Saca del medio)",
+        "siguiente": "inicio"
+      }
+    ]
+  }
+}
